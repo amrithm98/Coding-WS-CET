@@ -1,0 +1,10 @@
+STL
+=====
+1. vector - dynamic array 
+2. pair
+3. map
+4. unordered_map
+5. set
+6. unordered_set
+7. stack
+8. queue
