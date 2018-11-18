@@ -6,6 +6,12 @@ vector<int> dp(1000,-1);
 
 int staircase_dp(int n)
 {
+    if(n == 0)
+        return 1;
+    
+    if(n < 0)
+        return 0;
+
     if(dp[n] != -1)
         return dp[n];
     
@@ -33,7 +39,8 @@ int main(){
 
     cin >> n;
 
-    cout << staircase(n) << endl;
+    cout << "\nStairCase DP : " << staircase_dp(n) << endl;
+    cout << "\nStairCase Rec : " << staircase(n) << endl;
 
     return 0;
 }
