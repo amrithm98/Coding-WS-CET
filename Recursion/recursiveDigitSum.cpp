@@ -2,6 +2,15 @@
 
 using namespace std;
 
+
+int digitSum(int x)
+{
+    if(x == 0)
+        return 0;
+    else
+        return (x % 10) + digitSum(x / 10);
+}
+
 int main(){
 
     string s;
@@ -21,7 +30,7 @@ int main(){
 
     while(sum >= 10){
 
-        //sum = digitSum(sum);
+        sum = digitSum(sum);
     }
 
     cout << sum << endl;
