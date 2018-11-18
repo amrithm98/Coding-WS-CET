@@ -48,3 +48,16 @@ GeeksForGeeks - Solve company Archieves
 NOTE
 =====
 PRACTICE EVERYDAY !!!
+
+Contact
+=======
+Amrith : 7034376024
+
+Anand : 9744027636
+
+Nirmal : 8075804547
+
+
+Problems TO DO Practice
+======================
+shrib.com/ccode1 to shrib.com/ccode9
