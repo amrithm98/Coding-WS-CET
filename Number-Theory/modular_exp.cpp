@@ -1,17 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int mod_exp(int a, int b, int mod)
+long long mod_exp(int a, int b, int mod)
 {
+    if(b == 0)
+        return 1;
 
-    return 0;
+    long long res = mod_exp(a,b/2,mod);
+    
+    res= ((res % mod) * (res)%mod) % mod;
+
+    if(b%2 == 1)
+        res = (res*a)%mod;
+
+    return res;
+    
 }
 int exp(int a, int b)
 {
     if(b == 0)
         return 1;
 
-    int res = (res * res);
+    int res = exp(a,b/2);
+    
+    res= (res * res);
 
     if(b%2 == 1)
         res = res*a;
@@ -23,6 +35,9 @@ int exp(int a, int b)
 int main()
 {
 
-    cout << exp(2,1000000);
+    int x,y, mod;
+    cin >> x >> y >> mod;
+
+    cout << "\nMod Exp: " << mod_exp(x, y, mod) << endl;
     return 0;
 }
