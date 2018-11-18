@@ -1,6 +1,19 @@
 #include<iostream>
-
+#include<vector>
 using namespace std;
+
+vector<int> dp(1000,-1);
+
+int staircase_dp(int n)
+{
+    if(dp[n] != -1)
+        return dp[n];
+    
+    int result = staircase_dp(n-1) + staircase_dp(n-2) + staircase_dp(n-3);
+    dp[n] = result;
+
+    return result;
+}
 
 int staircase( int n){
 
